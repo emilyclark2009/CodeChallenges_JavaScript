@@ -7,7 +7,7 @@ Collaborate with a partner to complete five challenge questions which at least t
 + Practice Engagement
 + Practice javaScript coding ability
 + GitHub repository
-    +upload code
+    + upload code
     + cloning
     + pushing
     + pulling
