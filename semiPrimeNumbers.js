@@ -9,10 +9,53 @@ Variations of this challenge were reported to have been asked at interviews with
 */
 
 function semiPrimeCount(n) {
-
+    let count = 0;
+    const primes = [2];
+    //finds all relevevant primes less than n that can potentially make a product with another prime less than n
+    const upperLimit = Math.ceil(n/2)
+    for (let i=3; i < upperLimit; i++) {
+        if (isPrime(i)) {
+            primes.push(i);
+        }
+    }
+    
+    let primes2 = [...primes]; 
+    for (let k of primes) {
+        for (let j of primes2) {
+            if (k*j < n) {
+                count ++
+            }
+        }
+        primes2.shift();
+    }
+    return count
 }
 
-semiPrimeCount(10);
+console.log(semiPrimeCount(10));
 
 // Leave this so we can test your code:
 module.exports = semiPrimeCount;
+
+//function that determines whether or not a number is prime
+function isPrime(number) {
+    // to handle cases where the input is a negative integer
+    number = Math.abs(number);
+    //to handle cases where the input is 1 or 0 becasue these special cases are not included in my algorithm
+    if (number === 1 || number === 0){
+        return false;
+    }
+    //to handle cases where the input is not an integer
+    if (Number.isInteger(number)) {
+        //If there are no factors of the number within the range 2 through the squareroot of the number, then the number is prime.
+        let upperLimit = Math.ceil(Math.sqrt(number));
+        for (let i=2; i <= upperLimit ; i++) {
+            if (number % i === 0) {
+                return false
+            }
+        return true
+        }
+    }else{
+        return "Number must be an integer to execute."
+    }
+}
+
