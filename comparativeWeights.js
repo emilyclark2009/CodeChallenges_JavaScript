@@ -7,11 +7,15 @@ For example, if you have 3 balls, you can compare 2 of them to see if they are o
 
 This challenge was reported to have been asked in interviews at many top companies, including Microsoft. If you’ve covered the material in Pass the Technical Interview with JavaScript or an equivalent, you should be able to solve this challenge. If you have trouble, try refreshing your knowledge with its Algorithmic Complexity content.
 */
-//Testing out gitHub functionality
-// Another change from benshawuk
 
 function scaleOfTruthN(n) {
-
+    let count = 0
+    while (n>1) {
+        // trisection method is best because one group is on oneside of the scale one group is on the other and the last group is not on the scale. 
+        n = n/3
+        count++
+    }
+    return count
 }
 
 scaleOfTruthN(3);
