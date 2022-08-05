@@ -18,7 +18,8 @@ function scaleOfTruthN(n) {
     return count
 }
 
-scaleOfTruthN(3);
 
-// Leave this so we can test your code:
-module.exports = scaleOfTruthN;
+
+console.log(scaleOfTruthN(2));
+
+
