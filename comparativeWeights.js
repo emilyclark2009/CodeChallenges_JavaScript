@@ -7,52 +7,15 @@ For example, if you have 3 balls, you can compare 2 of them to see if they are o
 
 This challenge was reported to have been asked in interviews at many top companies, including Microsoft. If you’ve covered the material in Pass the Technical Interview with JavaScript or an equivalent, you should be able to solve this challenge. If you have trouble, try refreshing your knowledge with its Algorithmic Complexity content.
 */
-//Testing out gitHub functionality
-// Another change from benshawuk
-
-// Bisection search?
-
-// console.log(Math.log2(100))
-
-// 6.643856189774724
-// console.log(Math.floor(6.643856189774724));
-
 
 function scaleOfTruthN(n) {
-  
-    // Is the number odd or even?
-  
-    // If it's odd, then subtract 1 to round it down?
-    //while loop
     let count = 0
     while (n>1) {
+        // trisection method is best because one group is on oneside of the scale one group is on the other and the last group is not on the scale. 
         n = n/3
         count++
     }
-    
     return count
-    // Keep dividing by 2 until you reach 1
-    // ** - This is a "log" function - (logbase 2?)
-    // let finalResult
-    // const initialResult = Math.round(Math.log2(n))
-
-    // return Math.round(Math.log3(n))
-
-    // finalResult = initialResult
-    // return finalResult
-
-    // if(initialResult === 0) { return initialResult + 1} else { return initialResult }
-
-    // For loop - to reach this?
-
-    //   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log2
-
-    // Math.log2(3);    // 1.584962500721156
-
-    // Round down to nearest whole number?
-
-    
-
 }
 
 
